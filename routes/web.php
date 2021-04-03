@@ -1,5 +1,7 @@
 <?php
-
+use Illuminate\Routing\RouteRegistrar;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,10 +14,16 @@
 */
 
 Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/', function () {
     return view('index');
 });
 
 Route::get('/portofolio', function () {
     return view('portofolio');
 });
+
+
 
